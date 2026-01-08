@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# 🕐 Horloge Apprentissage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Application interactive pour apprendre à lire l'heure, conçue pour les enfants.
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ce projet a été créé pour aider les enfants à apprendre à lire l'heure sur une horloge analogique de manière ludique et interactive. L'application propose différents modes d'apprentissage avec des visuels adaptés aux enfants.
 
-## React Compiler
+## Fonctionnalités
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Horloge en temps réel** : visualisation de l'heure actuelle
+- **Mode Quiz** : deviner l'heure affichée sur l'horloge
+- **Indicateurs contextuels** : 
+  - Couleurs de fond selon le moment de la journée
+  - Icônes soleil/lune pour matin/après-midi/soir/nuit
+- **Système de score** pour encourager la progression
+- **Interface colorée et ludique** adaptée aux enfants
 
-## Expanding the ESLint configuration
+## Technologies utilisées
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- TypeScript
+- Vite
+- SVG pour le rendu de l'horloge
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```bash
+# Cloner le projet
+git clone https://github.com/LamourMarine/horloge-apprentissage.git
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Installer les dépendances
+cd horloge-apprentissage
+npm install
+
+# Lancer en mode développement
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Évolutions futures
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- [ ] Niveaux de difficulté (heures pleines, demi-heures, minutes précises)
+- [ ] Mode "place les aiguilles" 
+- [ ] Système de badges et récompenses
+- [ ] Sauvegarde des scores (localStorage)
+- [ ] Effets sonores d'encouragement
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Auteur
+
+Marine - Développeuse Web en formation
+
+## Licence
+
+MIT
